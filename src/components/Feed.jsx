@@ -18,7 +18,7 @@ class Feed extends React.Component {
   render() { 
     return (
     <div>
-        <button onClick={ ()=>  this.feedButtonClicked()}>Feed JimAGotchi</button>
+        <button onClick={ ()=>  this.feedButtonClicked()}>Feed JimAGotchi A Burrito</button>
     </div>
     );
   }

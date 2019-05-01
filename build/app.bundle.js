@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3696fdaa2341577683aa"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9e58b24c07752f65aeda"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -42840,6 +42840,7 @@ if(true) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/react.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TamagotchiControl__ = __webpack_require__("./src/components/TamagotchiControl.jsx");
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42847,6 +42848,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -42865,7 +42867,7 @@ var App = function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         null,
-        "App Works!"
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__TamagotchiControl__["a" /* default */], null)
       );
     }
   }]);
@@ -42887,6 +42889,432 @@ var _temp = function () {
   __REACT_HOT_LOADER__.register(App, "App", "/Users/Guest/Desktop/tamagotchi/src/components/App.jsx");
 
   __REACT_HOT_LOADER__.register(_default, "default", "/Users/Guest/Desktop/tamagotchi/src/components/App.jsx");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./src/components/Feed.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var Feed = function (_React$Component) {
+    _inherits(Feed, _React$Component);
+
+    function Feed(props) {
+        _classCallCheck(this, Feed);
+
+        var _this = _possibleConstructorReturn(this, (Feed.__proto__ || Object.getPrototypeOf(Feed)).call(this, props));
+
+        _this.state = _this.props.status;
+
+        _this.feedButtonClicked = _this.feedButtonClicked.bind(_this);
+        return _this;
+    }
+
+    _createClass(Feed, [{
+        key: "feedButtonClicked",
+        value: function feedButtonClicked() {
+
+            this.props.onFeedButtonClicked();
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "button",
+                    { onClick: function onClick() {
+                            return _this2.feedButtonClicked();
+                        } },
+                    "Feed JimAGotchi"
+                )
+            );
+        }
+    }]);
+
+    return Feed;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+var _default = Feed;
+
+
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(Feed, "Feed", "/Users/Guest/Desktop/tamagotchi/src/components/Feed.jsx");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/Guest/Desktop/tamagotchi/src/components/Feed.jsx");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./src/components/Play.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var Play = function (_React$Component) {
+    _inherits(Play, _React$Component);
+
+    function Play(props) {
+        _classCallCheck(this, Play);
+
+        var _this = _possibleConstructorReturn(this, (Play.__proto__ || Object.getPrototypeOf(Play)).call(this, props));
+
+        _this.state = _this.props.status;
+
+        _this.playButtonClicked = _this.playButtonClicked.bind(_this);
+        return _this;
+    }
+
+    _createClass(Play, [{
+        key: "playButtonClicked",
+        value: function playButtonClicked() {
+            this.props.onPlayButtonClicked();
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "button",
+                    { onClick: function onClick() {
+                            return _this2.playButtonClicked();
+                        } },
+                    "Play with JimAGotchi"
+                )
+            );
+        }
+    }]);
+
+    return Play;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+var _default = Play;
+
+
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(Play, "Play", "/Users/Guest/Desktop/tamagotchi/src/components/Play.jsx");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/Guest/Desktop/tamagotchi/src/components/Play.jsx");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./src/components/Sleep.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var Sleep = function (_React$Component) {
+    _inherits(Sleep, _React$Component);
+
+    function Sleep(props) {
+        _classCallCheck(this, Sleep);
+
+        var _this = _possibleConstructorReturn(this, (Sleep.__proto__ || Object.getPrototypeOf(Sleep)).call(this, props));
+
+        _this.state = _this.props.status;
+
+        _this.sleepButtonClicked = _this.sleepButtonClicked.bind(_this);
+        return _this;
+    }
+
+    _createClass(Sleep, [{
+        key: "sleepButtonClicked",
+        value: function sleepButtonClicked() {
+            this.props.onSleepButtonClicked();
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "button",
+                    { onClick: function onClick() {
+                            return _this2.sleepButtonClicked();
+                        } },
+                    "Make JimAGotchi Sleep"
+                )
+            );
+        }
+    }]);
+
+    return Sleep;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+var _default = Sleep;
+
+
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(Sleep, "Sleep", "/Users/Guest/Desktop/tamagotchi/src/components/Sleep.jsx");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/Guest/Desktop/tamagotchi/src/components/Sleep.jsx");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./src/components/Tamagotchi.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Feed__ = __webpack_require__("./src/components/Feed.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Sleep__ = __webpack_require__("./src/components/Sleep.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Play__ = __webpack_require__("./src/components/Play.jsx");
+
+
+
+
+
+
+function Tamagotchi(props) {
+
+  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+    'div',
+    null,
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+      'h2',
+      null,
+      'JimAGotchi'
+    ),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: 'https://media.licdn.com/dms/image/C5603AQEpNsozWfuDTA/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=YL4qihg_CtkGQnktIE2BquMU4CucVC-Ewv43zfIiVSc' }),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Feed__["a" /* default */], {
+      status: props, onFeedButtonClicked: props.onFeedButtonClicked }),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Sleep__["a" /* default */], { status: props, onSleepButtonClicked: props.onSleepButtonClicked }),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Play__["a" /* default */], { status: props, onPlayButtonClicked: props.onPlayButtonClicked })
+  );
+}
+
+var _default = Tamagotchi;
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(Tamagotchi, 'Tamagotchi', '/Users/Guest/Desktop/tamagotchi/src/components/Tamagotchi.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Guest/Desktop/tamagotchi/src/components/Tamagotchi.jsx');
+}();
+
+;
+
+/***/ }),
+
+/***/ "./src/components/TamagotchiControl.jsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Tamagotchi__ = __webpack_require__("./src/components/Tamagotchi.jsx");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var TamagotchiControl = function (_React$Component) {
+    _inherits(TamagotchiControl, _React$Component);
+
+    function TamagotchiControl(props) {
+        _classCallCheck(this, TamagotchiControl);
+
+        var _this = _possibleConstructorReturn(this, (TamagotchiControl.__proto__ || Object.getPrototypeOf(TamagotchiControl)).call(this, props));
+
+        _this.state = {
+            isDead: false,
+            hp: 100
+        };
+        _this.decliningHealth = _this.decliningHealth.bind(_this);
+        _this.handleFeedButtonClicked = _this.handleFeedButtonClicked.bind(_this);
+        _this.handleSleepButtonClicked = _this.handleSleepButtonClicked.bind(_this);
+        _this.handlePlayButtonClicked = _this.handlePlayButtonClicked.bind(_this);
+        return _this;
+    }
+
+    _createClass(TamagotchiControl, [{
+        key: "handleFeedButtonClicked",
+        value: function handleFeedButtonClicked() {
+            var newHealth = this.state.hp;
+
+            if (newHealth < 90) {
+                this.setState({ hp: newHealth + 10 });
+            }
+        }
+    }, {
+        key: "handleSleepButtonClicked",
+        value: function handleSleepButtonClicked() {
+            var newHealth = this.state.hp;
+
+            if (newHealth < 70) {
+                this.setState({ hp: newHealth + 30 });
+            }
+        }
+    }, {
+        key: "handlePlayButtonClicked",
+        value: function handlePlayButtonClicked() {
+            var newHealth = this.state.hp;
+
+            if (newHealth < 90) {
+                this.setState({ hp: newHealth + 5 });
+            }
+        }
+    }, {
+        key: "restartGame",
+        value: function restartGame() {
+            location.reload();
+        }
+    }, {
+        key: "decliningHealth",
+        value: function decliningHealth() {
+            var _this2 = this;
+
+            document.getElementById("startButton").style.display = "none";
+            var newHealthState;
+
+            var clock = setInterval(function () {
+                newHealthState = _this2.state.hp;
+                newHealthState--;
+                _this2.setState({ hp: newHealthState });
+                if (_this2.state.hp <= 0) {
+                    document.getElementById("restartButton").style.display = "inline";
+                    _this2.setState({ isDead: true, hp: "Dead" });
+                    clearInterval(clock);
+                }
+            }, 500);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var styles = {
+                display: 'none'
+            };
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Tamagotchi__["a" /* default */], { health: this.state.hp, onFeedButtonClicked: this.handleFeedButtonClicked, onSleepButtonClicked: this.handleSleepButtonClicked, onPlayButtonClicked: this.handlePlayButtonClicked }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "p",
+                    null,
+                    "Health: ",
+                    this.state.hp
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "button",
+                    { id: "startButton", onClick: this.decliningHealth },
+                    "Start game"
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "button",
+                    { style: styles, id: "restartButton", onClick: this.restartGame },
+                    "Restart game"
+                )
+            );
+        }
+    }]);
+
+    return TamagotchiControl;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+var _default = TamagotchiControl;
+
+
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(TamagotchiControl, "TamagotchiControl", "/Users/Guest/Desktop/tamagotchi/src/components/TamagotchiControl.jsx");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/Guest/Desktop/tamagotchi/src/components/TamagotchiControl.jsx");
 }();
 
 ;

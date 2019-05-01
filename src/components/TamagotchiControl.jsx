@@ -69,14 +69,23 @@ class TamagotchiControl extends React.Component {
         display: 'none'
     }
     return (
-   
+        <div>
+            <style>{`
+                    .center {
+                        text-align: center;
+                    }
+                `}
+                </style>
 
-    <div>
-        <Tamagotchi health = {this.state.hp} onFeedButtonClicked = {this.handleFeedButtonClicked} onSleepButtonClicked = {this.handleSleepButtonClicked} onPlayButtonClicked = {this.handlePlayButtonClicked}/>
-        <p>Health: {this.state.hp}</p>
-        <button id="startButton" onClick={this.decliningHealth}>Start game</button>
-        <button style={styles} id="restartButton" onClick={this.restartGame}>Restart game</button>
-    </div>
+            <div className="center">
+                <Tamagotchi health = {this.state.hp} onFeedButtonClicked = {this.handleFeedButtonClicked} onSleepButtonClicked = {this.handleSleepButtonClicked} onPlayButtonClicked = {this.handlePlayButtonClicked}/>
+                <p>Health: {this.state.hp}</p>
+                <button id="startButton" onClick={this.decliningHealth}>Start game</button>
+                <button style={styles} id="restartButton" onClick={this.restartGame}>Restart game</button>
+            </div>
+
+        </div>
+        
     );
   }
 }
